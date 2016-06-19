@@ -20,6 +20,7 @@ namespace SSVan.Config
         public static string UserNameFacebook;
         public static string PasswordFacebook;
         public static bool KeepLogin;
+        public static string TimeOut;
         #endregion
     }
 }

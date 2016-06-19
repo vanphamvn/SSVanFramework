@@ -29,6 +29,7 @@ namespace SSVan.Business_Functions
             KeyboardLibs.Enter(ILogin.txt_Password , Password);
             CustomWait.WaitForControlClickable(ILogin.btn_Login);
             MouseLibs.Click(ILogin.btn_Login);
+            CustomWait.WaitForPageLoad(60);
 
         }
         public static void Logout()

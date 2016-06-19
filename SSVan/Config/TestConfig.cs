@@ -5,6 +5,7 @@ using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Chrome;
 using System;
 using SSVan.General_Functions;
+using OpenQA.Selenium.Support.UI;
 
 namespace SSVan.Config
 {
@@ -34,12 +35,11 @@ namespace SSVan.Config
                 driver= new ChromeDriver(StartupHelper.GetUserVariables(), opt);
             }
             TestBasics.driver = driver;
-            //driver.Manage().Window.Maximize();
-            //driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(Convert.ToDouble(ConstantsLib.TimeOut)));
-            //driver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(Convert.ToDouble(ConstantsLib.TimeOut)));
-            //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(Convert.ToDouble(ConstantsLib.TimeOut)));
-            //ConstantsLib.driver = driver;
-            //ConstantsLib.wait = wait;
+            driver.Manage().Window.Maximize();
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(Convert.ToDouble(TestBasics.TimeOut)));
+            driver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(Convert.ToDouble(TestBasics.TimeOut)));
+            TestBasics.Wait = new WebDriverWait(driver, TimeSpan.FromSeconds(Convert.ToDouble(TestBasics.TimeOut)));
+
         }
         [TestCleanup]
         public void TestCleanup()

@@ -21,11 +21,14 @@ namespace SSVan.General_Functions
             xml.Load(GetUserVariables()+"/Variables.xml");
             TestBasics.Browser= xml.SelectSingleNode("//Browser").InnerText.ToUpper();
             TestBasics.ApplicationURL= xml.SelectSingleNode("//ApplicationName/URL").InnerText.ToUpper();
-            TestBasics.ApplicationURL = xml.SelectSingleNode("//ApplicationName/UserName").InnerText.ToUpper();
-            TestBasics.ApplicationURL = xml.SelectSingleNode("//ApplicationName/Password").InnerText.ToUpper();
+            TestBasics.UserNameFacebook = xml.SelectSingleNode("//ApplicationName/UserName").InnerText.ToUpper();
+            TestBasics.PasswordFacebook = xml.SelectSingleNode("//ApplicationName/Password").InnerText.ToUpper();
             string KeepLogin= xml.SelectSingleNode("//ApplicationName/KeepLogin").InnerText.ToUpper();
             TestBasics.KeepLogin = bool.Parse(KeepLogin);
+            TestBasics.TimeOut= xml.SelectSingleNode("//Timeout").InnerText.ToUpper();
             #endregion
+
+
         }
     }
 }

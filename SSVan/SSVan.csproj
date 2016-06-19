@@ -76,6 +76,7 @@
     <Compile Include="General_Functions\ElementHelper.cs" />
     <Compile Include="General_Functions\StartupHelper.cs" />
     <Compile Include="Interfaces\Facebook\ILogin.cs" />
+    <Compile Include="Interfaces\Facebook\INewsFeed.cs" />
     <Compile Include="Tests\TestTemp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
