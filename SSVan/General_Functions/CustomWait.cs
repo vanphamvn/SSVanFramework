@@ -25,8 +25,18 @@ namespace SSVan.General_Functions
             } while (readyState.ToLower() != "complete");
         }
 
-        public static void WaitForTextDisplayed(By Control) {
-
+        public static void WaitForTextDisplayed(By Control, string Text, int TimeOut=10) {
+            DateTime now = DateTime.Now;
+            string Actual="~!@#$#@!~";
+            do
+            {
+                Actual = ElementHelper.FindElement(Control).Text;
+                Thread.Sleep(200);
+                if ((DateTime.Now-now).Seconds>TimeOut)
+                {
+                    break;
+                }
+            } while (Actual.ToLower()!=Text.ToLower());
         }
 
         public static void WaitForControlEnable(By Control) {
