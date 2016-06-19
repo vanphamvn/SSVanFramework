@@ -1,0 +1,13 @@
+<root>
+  <Browser>CR</Browser>
+  <!-- 'IE' for Internet Explorer-->
+  <!-- 'FF' for Firefox-->
+  <!-- 'CR' for Chrome-->
+  <Timeout>30</Timeout>
+  <ApplicationName>
+    <URL>https://www.facebook.com/</URL>
+    <UserName>01228699959</UserName>
+    <Password>automationfacebook</Password>
+    <KeepLogin>true</KeepLogin>
+  </ApplicationName>
+</root>
