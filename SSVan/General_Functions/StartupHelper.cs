@@ -25,7 +25,7 @@ namespace SSVan.General_Functions
             TestBasics.PasswordFacebook = xml.SelectSingleNode("//ApplicationName/Password").InnerText.ToUpper();
             string KeepLogin= xml.SelectSingleNode("//ApplicationName/KeepLogin").InnerText.ToUpper();
             TestBasics.KeepLogin = bool.Parse(KeepLogin);
-            TestBasics.TimeOut= xml.SelectSingleNode("//Timeout").InnerText.ToUpper();
+            TestBasics.TimeOut= int.Parse(xml.SelectSingleNode("//Timeout").InnerText.ToUpper());
             #endregion
 
 

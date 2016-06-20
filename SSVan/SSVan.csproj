@@ -74,7 +74,9 @@
     <Compile Include="General_Functions\BasicInput\TableLibs.cs" />
     <Compile Include="General_Functions\CustomWait.cs" />
     <Compile Include="General_Functions\ElementHelper.cs" />
+    <Compile Include="General_Functions\PDFHelper.cs" />
     <Compile Include="General_Functions\StartupHelper.cs" />
+    <Compile Include="General_Functions\WindowsHandling.cs" />
     <Compile Include="Interfaces\Facebook\ILogin.cs" />
     <Compile Include="Interfaces\Facebook\INewsFeed.cs" />
     <Compile Include="Tests\TestTemp.cs" />
@@ -86,6 +88,7 @@
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Drivers\" />
+    <Folder Include="General_Functions\Verification\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
